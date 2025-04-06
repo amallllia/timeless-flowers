@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeless Flowers</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Toast CSS -->
+    <style>
+      .toast {
+        visibility: hidden;
+        min-width: 250px;
+        margin-left: -125px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        bottom: 30px;
+        font-size: 17px;
+      }
+
+      .toast.show {
+        visibility: visible;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      }
+
+      @keyframes fadein {
+        from {
+          bottom: 0;
+          opacity: 0;
+        }
+        to {
+          bottom: 30px;
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeout {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <header>
+    <input type="checkbox" name="" id="toggler" />
+    <label for="toggler" class="fas fa-bars"> </label>
+    <a ahref="#" class="logo">
+      <img src="images/t1.jpg" class="logo-image" alt="Logo" />
+      Timeless Flowers<span>.</span>
+    </a>
+
+    <nav class="navbar">
+      <a href="Home.html"> Acasă </a>
+      <a href="About.html"> Despre </a>
+      <a href="Shop.html"> Produse </a>
+      <a href="Contact.html"> Contact </a>
+    </nav>
+  </header>
+
+  <body>
+    <!-- Your existing HTML content -->
+
+    <section class="contact" id="contact">
+      <h1 class="heading"><span>Contactează-mă</span></h1>
+      <div class="row">
+        <form
+          id="contact-form"
+          action="https://script.google.com/macros/s/AKfycbyh5MQ-EZAvtAksSXxvTAnEnddG_M2ObVNDIXHirhhUwL8Wtwb8a_l8p-43dLbopm71iA/exec"
+          method="POST"
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Nume"
+            class="box"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="box"
+            required
+          />
+          <input
+            type="text"
+            name="number"
+            placeholder="Telefon"
+            class="box"
+            required
+          />
+          <textarea
+            name="message"
+            class="box"
+            placeholder="Mesaj"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+          <input type="submit" value="Trimite Mesaj" class="btn" />
+        </form>
+
+        <div class="image">
+          <img src="images/t1.jpg" alt="Contact Image" />
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="box-container">
+        <div class="footer-box">
+          <h3>Linkuri rapide</h3>
+          <a href="Home.html"> Acasă </a>
+          <a href="About.html"> Despre </a>
+          <a href="Shop.html"> Produse </a>
+          <a href="Contact.html"> Contact </a>
+        </div>
+
+        <div class="footer-box">
+          <h3>Informații Contact</h3>
+          <a href="#"> 0720 798 649 </a>
+          <a href="#"> timelessflowers.ro@gmail.com </a>
+          <a href="#"> Pașcani, Iași - 705200 </a>
+          <img src="C:\atestat\images\card.png" alt="" />
+        </div>
+      </div>
+      <div class="credit">
+        creat de <span> Astefanoai Amalia Gabriela </span> | toate drepturile
+        rezervate |
+      </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Mesajul tau a fost trimis cu succes!</div>
+
+    <!-- JavaScript -->
+    <script>
+      $(document).ready(function () {
+        // Handle form submission using jQuery AJAX
+        $("#contact-form").submit(function (e) {
+          e.preventDefault(); // Prevent the default form submission
+
+          var formData = $(this).serialize(); // Serialize the form data
+
+          // Send the data using AJAX
+          $.ajax({
+            url: $(this).attr("action"), // Google Apps Script URL
+            method: "POST",
+            data: formData,
+            success: function (response) {
+              // If successful, show toast message and reset the form
+              $("#toast").addClass("show");
+              setTimeout(function () {
+                $("#toast").removeClass("show");
+              }, 3000);
+
+              $("#contact-form")[0].reset(); // Reset the form
+              window.location.href = "Home.html"; // Redirect to Home.html after success
+            },
+            error: function (xhr, status, error) {
+              // In case of error, log it and show an alert
+              alert("Something went wrong. Try again!");
+              console.error("Error: " + error);
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
