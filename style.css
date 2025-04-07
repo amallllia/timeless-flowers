@@ -571,82 +571,7 @@ header .fa-bars {
   color: var(--pink);
   font-family: "Cormorant Garamond ", serif;
 }
-/*FOOOOOOOOOOOOOOOOTTTTTTTTTTTTERRRRRRRRR ABOUTTTTTTTTTTTT*/
 
-/* Stiluri pentru secțiunea footer */
-.footer-about .box-container {
-  display: flex;
-  justify-content: space-between; /* Distribuie spațiul între cele două secțiuni */
-  gap: 3rem; /* Spațiu între cele două secțiuni */
-  padding: 2rem 9%; /* Adăugăm padding pe laturi pentru a da mai mult spațiu */
-  background: rgba(255, 51, 153, 0.05);
-}
-
-.footer-about .box-container .footer-box {
-  width: 45%; /* Fiecare div va ocupa 45% din lățimea containerului */
-  text-align: center; /* Asigură alinierea conținutului pe verticală */
-  padding: 2rem;
-  border-radius: 1rem; /* Colțuri rotunjite pentru un aspect mai plăcut */
-  background: #f9f9f9; /* Fundal deschis pentru a crea contrast */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adăugăm o umbră subtilă pentru adâncire */
-  border: 3px solid #ea45bb5c; /* Linii subtile pentru a le delimita */
-}
-.footer-about .box-container .footer-box h3 {
-  color: #333;
-  font-size: 2.5rem;
-  padding: 1rem 0;
-  font-weight: bold; /* Întărește titlurile pentru mai mult impact */
-  letter-spacing: 1px; /* Dă un spațiu ușor între litere */
-  text-transform: none;
-  font-family: "Cormorant Garamond ", serif;
-}
-
-.footer-about .box-container .footer-box a {
-  display: block;
-  color: #666;
-  font-size: 2rem;
-  padding: 1rem 0;
-  transition: color 0.3s ease;
-  text-transform: none;
-  font-family: "Cormorant Garamond ", serif;
-}
-
-.footer-about .box-container .footer-box a:hover {
-  color: var(--pink);
-  font-weight: bold; /* Întărește linkul la hover */
-}
-
-.footer-about .box-container .footer-box img {
-  width: 150px;
-  height: auto;
-  margin-top: 1rem;
-  display: block;
-  margin-left: auto; /* Aliniere automată pentru a o pune la centru */
-  margin-right: auto;
-  border-radius: 0.5rem; /* Colțuri rotunjite pentru imagine */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Umbră subtilă pentru imagine */
-}
-
-/* Stiluri pentru credit */
-.footer-about .credit {
-  text-align: center;
-  padding: 1.5rem;
-  margin-top: 1.5rem;
-  padding-top: 2.5rem;
-  font-size: 2rem;
-  color: #333;
-  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-  font-family: "Cormorant Garamond ", serif;
-}
-
-.footer-about .credit span {
-  color: var(--pink);
-  font-family: "Cormorant Garamond ", serif;
-}
-
-.footer-about {
-  padding: 0;
-}
 
 /* Modal styles */
 .modal {
@@ -669,6 +594,7 @@ header .fa-bars {
   border: 1px solid #888;
   width: 80%;
   max-width: 800px;
+   text-transform: none;
 }
 
 .modal-body {
