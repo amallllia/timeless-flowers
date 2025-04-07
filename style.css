@@ -1,744 +1,755 @@
 :root {
-  --pink: #e84393;
+  --pink: #e84393; /* Definirea unei variabile CSS pentru culoarea roz */
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  text-transform: capitalize;
-  transition: 0.2s linear;
+  margin: 0; /* Elimină marginea implicită a tuturor elementelor */
+  padding: 0; /* Elimină spațiul interior implicit */
+  box-sizing: border-box; /* Include padding și border în dimensiunile elementului */
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Font implicit pentru toate elementele */
+  outline: none; /* Elimină conturul implicit la focus */
+  border: none; /* Elimină bordura implicită */
+  text-decoration: none; /* Elimină sublinierea link-urilor */
+  text-transform: capitalize; /* Transformă primul caracter al fiecărui cuvânt în majusculă */
+  transition: 0.2s linear; /* Adaugă tranziție lină la orice schimbare de stil */
 }
 
 html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
-  overflow-x: hidden;
+  font-size: 62.5%; /* Setează 1rem = 10px pentru scalabilitate mai ușoară */
+  scroll-behavior: smooth; /* Scroll lin între secțiuni */
+  scroll-padding-top: 6rem; /* Adaugă spațiu de sus la scroll */
+  overflow-x: hidden; /* Ascunde scroll-ul orizontal */
 }
 
 section {
-  padding: 6rem 0;
+  padding: 6rem 0; /* Spațiere verticală între secțiuni */
 }
 
 .logo {
-  display: flex; /* Folosește Flexbox pentru alinierea elementelor */
-  align-items: center; /* Centrează imaginea și textul pe axa verticală */
-  justify-content: flex-start; /* Asigură că logo-ul este la stânga */
+  display: flex; /* Afișează conținutul pe axa orizontală */
+  align-items: center; /* Aliniază vertical conținutul */
+  justify-content: flex-start; /* Aliniază la începutul rândului */
 }
 
 .logo-image {
-  width: 70px; /* Lățimea imaginii */
-  height: 70px; /* Înălțimea imaginii */
+  width: 70px; /* Lățimea imaginii logo */
+  height: 70px; /* Înălțimea imaginii logo */
   object-fit: contain; /* Păstrează proporțiile imaginii */
-  margin-right: 10px; /* Adaugă un mic spațiu între logo și text (opțional) */
+  margin-right: 10px; /* Spațiu între logo și text */
 }
 
 .heading {
-  text-align: center;
-  font-size: 4rem;
-  color: #333;
-  padding: 1rem;
-  margin: 2rem 0;
-  background: rgba(255, 51, 153, 0.05);
-  font-family: "Cormorant Garamond", serif;
+  text-align: center; /* Aliniază textul la centru */
+  font-size: 4rem; /* Dimensiune mare pentru titlu */
+  color: #333; /* Culoare gri închis */
+  padding: 1rem; /* Spațiu interior */
+  margin: 2rem 0; /* Spațiu exterior sus și jos */
+  background: rgba(255, 51, 153, 0.05); /* Fundal roz deschis transparent */
+  font-family: "Cormorant Garamond", serif; /* Font decorativ pentru titluri */
 }
 
 .heading span {
-  color: var(--pink);
-  font-family: "Cormorant Garamond", serif;
+  color: var(--pink); /* Culoare roz pentru span-ul din heading */
+  font-family: "Cormorant Garamond", serif; /* Font decorativ */
 }
-
 .btn {
-  display: inline-block;
-  margin-top: 1rem;
-  border-radius: 5rem;
-  background: #333;
-  color: #fff;
-  padding: 0.9rem 3.5rem;
-  cursor: pointer;
-  font-size: 2rem;
-  font-family: "Cormorant Garamond", serif;
+  display: inline-block; /* Butonul se comportă ca un element inline, dar acceptă proprietăți de block */
+  margin-top: 1rem; /* Spațiu deasupra butonului */
+  border-radius: 5rem; /* Colțuri rotunjite puternic, aspect de pastilă */
+  background: #333; /* Fundal închis pentru buton */
+  color: #fff; /* Text alb în interiorul butonului */
+  padding: 0.9rem 3.5rem; /* Spațiu intern vertical și orizontal */
+  cursor: pointer; /* Cursorul devine pointer la hover (indică acțiune) */
+  font-size: 2rem; /* Dimensiune relativ mare pentru textul din buton */
+  font-family: "Cormorant Garamond", serif; /* Font elegant pentru buton */
 }
 
 .btn:hover {
-  background: var(--pink);
+  background: var(
+    --pink
+  ); /* La hover, fundalul devine roz (culoare definită în variabilă) */
 }
 
 header {
-  position: fixed;
+  position: fixed; /* Header-ul rămâne fixat sus chiar și când faci scroll */
   top: 0;
   left: 0;
   right: 0;
-  background: #fff;
-  padding: 2rem 9%;
-  padding-left: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1000;
-  font-family: "Cormorant Garamond", serif;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background: #fff; /* Fundal alb pentru header */
+  padding: 2rem 9%; /* Spațiu în jurul conținutului headerului */
+  padding-left: 10px; /* Suprascriere parțială a paddingului stânga pentru un control fin */
+  display: flex; /* Folosim flexbox pentru alinierea internă */
+  align-items: center; /* Centrare verticală a conținutului din header */
+  justify-content: space-between; /* Elemente de la stânga și dreapta, cu spațiu între ele */
+  z-index: 1000; /* Se afișează peste alte elemente */
+  font-family: "Cormorant Garamond", serif; /* Font de titlu pentru un look rafinat */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Umbra discretă pentru adâncime */
 }
 
 header .logo {
-  font-size: 4rem;
-  color: #333;
-  font-family: "Lora", serif;
-  align-items: left;
+  font-size: 4rem; /* Logo-ul este foarte vizibil */
+  color: #333; /* Culoare neutră închisă pentru logo */
+  font-family: "Lora", serif; /* Font diferit pentru logo, oferă contrast față de restul textului */
+  align-items: left; /* Aliniere la stânga (deși nu influențează prea mult aici) */
 }
 
 header .logo span {
-  color: var(--pink);
+  color: var(
+    --pink
+  ); /* Culoare roz aplicată pe o parte din logo pentru accent vizual */
 }
 
 header .navbar a {
-  font-size: 3rem;
-  padding: 0 1.5rem;
-  color: #666;
-  font-family: "Cormorant Garamond", serif;
+  font-size: 3rem; /* Link-urile din navbar sunt mari și ușor de citit */
+  padding: 0 1.5rem; /* Spațiu între linkuri */
+  color: #666; /* Gri închis pentru textul de navigare */
+  font-family: "Cormorant Garamond", serif; /* Font serif pentru eleganță și coerență cu restul designului */
 }
 
 header .navbar a:hover {
-  color: var(--pink);
+  color: var(--pink); /* La hover, link-ul devine roz */
 }
 
 header #toggler:checked ~ .navbar {
-  display: block;
+  display: block; /* Afișează navbarul când toggler-ul este bifat (folosit în responsive menu) */
 }
 
 header #toggler {
-  display: none;
+  display: none; /* Ascunde checkbox-ul de toggler, folosit pentru meniul burger */
 }
 
 header .fa-bars {
-  font-size: 3rem;
-  color: #333;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1.5rem;
-  cursor: pointer;
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  display: none;
+  font-size: 3rem; /* Icon-ul burger are dimensiune mare, ușor de apăsat */
+  color: #333; /* Culoare neutră închisă pentru icon */
+  border-radius: 0.5rem; /* Colțuri ușor rotunjite pentru icon */
+  padding: 0.5rem 1.5rem; /* Spațiere internă pentru zona clicabilă */
+  cursor: pointer; /* Cursor pointer pentru interacțiune */
+  border: 2px solid rgba(0, 0, 0, 0.3); /* Border semi-transparent pentru icon */
+  display: none; /* Ascuns inițial, se afișează doar pe ecrane mici (prin media query) */
 }
-
 .home {
-  display: flex;
-  align-items: center;
-  min-height: 100vh;
-  background-image: url("images/bkg2.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  display: flex; /* Activăm flexbox pentru a alinia conținutul */
+  align-items: center; /* Centrare verticală a conținutului */
+  min-height: 100vh; /* Înălțime minimă de 100% din înălțimea vizibilă a ferestrei */
+  background-image: url("images/bkg2.jpg"); /* Setăm o imagine de fundal */
+  background-size: cover; /* Imaginea va acoperi complet containerul */
+  background-position: center; /* Imaginea este centrată */
+  justify-content: center; /* Centrare orizontală a conținutului */
+  text-align: center; /* Aliniere pe centru a textului din interior */
 }
 
 .home .content {
-  max-width: 50rem;
-  padding: 2rem;
+  max-width: 50rem; /* Limităm lățimea maximă pentru lizibilitate */
+  padding: 2rem; /* Spațiu interior pentru respirabilitate */
 }
 
 .home .content h3 {
-  font-size: 6rem;
-  color: #cf1d52;
-  font-family: "Cormorant Garamond", serif;
-  -webkit-text-stroke: 1px #c652be; /* contur negru peste text roz */
+  font-size: 6rem; /* Dimensiune foarte mare pentru titlu */
+  color: #cf1d52; /* Culoare roz închis/roșcată pentru text */
+  font-family: "Cormorant Garamond", serif; /* Font elegant și clasic */
+  -webkit-text-stroke: 1px #c652be; /* Contur roz/lila aplicat textului pentru un efect decorativ */
 }
 
 .home .content span {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 3.5rem;
-  color: var(--pink);
-  padding: 1rem 0;
-  line-height: 1.5;
+  font-family: "Cormorant Garamond", serif; /* Font consistent cu restul paginii */
+  font-size: 3.5rem; /* Dimensiune medie-mare pentru subtitlu sau text de accent */
+  color: var(--pink); /* Culoare roz definită în variabilă CSS */
+  padding: 1rem 0; /* Spațiu vertical deasupra și dedesubt */
+  line-height: 1.5; /* Spațiu între linii pentru lizibilitate */
 }
 
 .home .content p {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
-  color: #444;
-  padding: 1rem 0;
-  line-height: 1.5;
-  text-transform: none;
+  font-family: "Cormorant Garamond", serif; /* Font elegant și ușor de citit */
+  font-size: 2rem; /* Dimensiune potrivită pentru paragrafe */
+  color: #444; /* Gri închis, ușor de citit pe fundal deschis */
+  padding: 1rem 0; /* Spațiere verticală pentru claritate vizuală */
+  line-height: 1.5; /* Spațiere între rânduri pentru confort vizual */
+  text-transform: none; /* Nu se aplică transformări de tip uppercase/lowercase */
 }
 #about-page {
-  background-image: url("images/bkg1.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  padding-top: 9rem;
-  justify-content: flex-end; /* Aliniază containerul pe partea dreaptă */
-  text-decoration: none;
+  background-image: url("images/bkg1.jpg"); /* Fundal vizual cu imagine */
+  background-size: cover; /* Imaginea acoperă tot spațiul */
+  background-position: center center; /* Imaginea e centrată perfect */
+  background-repeat: no-repeat; /* Nu se repetă imaginea */
+  min-height: 100vh; /* Înălțime minimă: 100% din viewport */
+  padding-top: 9rem; /* Spațiu sus – compensare pentru header fix */
+  justify-content: flex-end; /* Aliniere conținut la dreapta */
+  text-decoration: none; /* Elimină orice decorare text (necesar doar dacă s-ar aplica direct textului) */
 }
 
 #about-page .content {
-  max-width: 1200px; /* Limitează lățimea pentru a nu fi prea larg */
-  padding: 20px;
-  background-color: #fff; /* Fundal alb pentru text */
-  border-radius: 50px; /* Colțuri rotunjite */
-  box-shadow: 0 15px 30px rgba(235, 126, 231, 0.268); /* Adaugă umbră subtilă pentru un efect de adâncire */
-  margin-left: auto; /* Mărește marginea stângă pentru a alinia la dreapta */
-  margin-right: 0; /* Asigură-te că nu există margine pe dreapta */
-  margin-top: 8rem;
-  text-decoration: none;
+  max-width: 1200px; /* Lățime maximă pentru lizibilitate */
+  padding: 20px; /* Spațiu interior */
+  background-color: #fff; /* Fundal alb pentru contrast */
+  border-radius: 50px; /* Colțuri mari rotunjite */
+  box-shadow: 0 15px 30px rgba(235, 126, 231, 0.268); /* Umbre pentru adâncime */
+  margin-left: auto; /* Conținut împins spre dreapta */
+  margin-right: 0; /* Fixare la marginea din dreapta */
+  margin-top: 8rem; /* Spațiu sus */
+  text-decoration: none; /* Eliminare decor text – probabil redundant aici */
 }
 
 #about-page .content p {
-  font-size: 2rem;
-  line-height: 1.6;
-  color: #333;
-
-  font-family: "Cormorant Garamond", serif;
-  text-decoration: none;
-  text-transform: none; /* Dezactivează majusculele automtice */
-  text-align: justify; /* Poți ajusta alinierea textului */
-  text-indent: 30px; /* Adaugă indentare (spațiu înainte de primul rând al paragrafului) */
+  font-size: 2rem; /* Dimensiune text mare */
+  line-height: 1.6; /* Spațiere între rânduri */
+  color: #333; /* Gri închis – ușor de citit */
+  font-family: "Cormorant Garamond", serif; /* Font elegant */
+  text-decoration: none; /* Fără sublinieri */
+  text-transform: none; /* Textul nu este forțat în majuscule */
+  text-align: justify; /* Text justificat (margini drepte) */
+  text-indent: 30px; /* Spațiu la începutul fiecărui paragraf */
 }
 
 #home-page {
-  background-image: none;
+  background-image: none; /* Elimină imaginea de fundal dacă se revine pe homepage */
 }
 .about .row {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  padding: 2rem 0;
-  padding-bottom: 3rem;
+  display: flex; /* Layout pe orizontală */
+  align-items: center; /* Centrare verticală */
+  gap: 2rem; /* Spațiere între elemente */
+  flex-wrap: wrap; /* Permite ca elementele să treacă pe rândul următor */
+  padding: 2rem 0; /* Spațiu vertical */
+  padding-bottom: 3rem; /* Spațiu extra jos */
 }
 
 .about .row .video-container {
-  flex: 1 1 40rem;
-  position: relative;
+  flex: 1 1 40rem; /* Ocupă 40rem și e flexibil */
+  position: relative; /* Pentru poziționarea absolută a titlului peste video */
 }
 
 .about .row .video-container video {
-  width: 100%;
-  border: 1.5rem solid #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  height: 100%;
-  object-fit: cover;
+  width: 100%; /* Se întinde complet în container */
+  border: 1.5rem solid #fff; /* Ramă albă groasă */
+  border-radius: 0.5rem; /* Colțuri rotunjite */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Umbră subtilă */
+  height: 100%; /* Umple înălțimea containerului */
+  object-fit: cover; /* Păstrează proporțiile și taie ce depășește */
 }
 
 .about .row .video-container h3 {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 3rem;
-  background: #fff;
-  width: 100%;
-  padding: 1rem 2rem;
-  text-align: center;
-  mix-blend-mode: screen;
+  position: absolute; /* Poziționat peste video */
+  top: 50%; /* Mijlocul pe verticală */
+  transform: translateY(-50%); /* Centrare perfectă pe verticală */
+  font-size: 3rem; /* Dimensiune mare pentru titlu */
+  background: #fff; /* Fundal alb pentru lizibilitate */
+  width: 100%; /* Ocupă toată lățimea */
+  padding: 1rem 2rem; /* Spațiere interioară */
+  text-align: center; /* Text centrat */
+  mix-blend-mode: screen; /* Efect vizual interesant, face alb peste video mai transparent */
 }
-
 .about .row .content {
-  flex: 1 1 40rem;
+  flex: 1 1 40rem; /* Ocupă 40rem, dar este flexibil */
 }
 
 .about .row .content h3 {
-  font-size: 3rem;
-  color: var(--pink);
-  font-family: "Cormorant Garand ", serif;
+  font-size: 3rem; /* Dimensiune mare pentru subtitlu */
+  color: var(--pink); /* Culoare tematică */
+  font-family: "Cormorant Garand ", serif; /* Atenție: aici e o literă greșită – „Garand” în loc de „Garamond” */
 }
 
 .about .row .content p {
-  font-size: 1.5rem;
-  color: #999;
-  padding: 0.5rem 0;
-  padding-top: 1rem;
-  line-height: 1.5;
+  font-size: 1.5rem; /* Dimensiune medie */
+  color: #999; /* Gri deschis */
+  padding: 0.5rem 0; /* Spațiu vertical */
+  padding-top: 1rem; /* Extra spațiu sus */
+  line-height: 1.5; /* Spațiere între linii */
   font-family: "Cormorant Garamond ", serif;
   text-transform: none;
 }
 
 .about .row .content p strong {
-  font-size: 1.5rem;
-  color: #999;
+  font-size: 2rem; /* Mai mare decât textul normal */
+  font-weight: bold;
+  color: #e84393; /* Roz accentuat */
   padding: 0.5rem 0;
   padding-top: 1rem;
   line-height: 1.5;
   font-family: "Cormorant Garamond ", serif;
   text-transform: none;
-  font-weight: bold; /* Asigură-te că textul rămâne îndrăzneț */
-  color: #e84393; /* Culoare personalizată pentru <strong> */
-  font-size: 2rem; /* Dimensiune text pentru <strong> */
 }
 
-/* Stiluri pentru textul din <span> aflat în interiorul <strong> */
 .about .row .content p strong span {
-  color: #333; /* Culoare pentru textul din <span> */
+  color: #333; /* Contrast cu rozul din <strong> */
   font-family: "Cormorant Garamond ", serif;
-  font-weight: normal; /* Poți face textul mai subțire decât cel din <strong> */
+  font-weight: normal; /* Face span-ul mai subtil */
 }
-
 .icons-container {
-  background: rgba(255, 51, 153, 0.05);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  background: rgba(
+    255,
+    51,
+    153,
+    0.05
+  ); /* Fundal roz foarte deschis, aproape alb */
+  display: flex; /* Afișează elementele în linie */
+  flex-wrap: wrap; /* Permite iconițelor să treacă pe rânduri noi */
+  gap: 1.5rem; /* Spațiere între fiecare icon */
   padding-top: 5rem;
   padding-bottom: 5rem;
-  justify-content: center;
+  justify-content: center; /* Centrare pe orizontală */
 }
-
 .icons-container .icons {
-  background: #ffffff;
-  border: 1rem solid rgba(245, 63, 181, 0.218);
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  flex: 1 1 25rem;
-  max-width: 25%;
-  gap: 1rem;
+  background: #ffffff; /* Fundal alb pentru fiecare casetă */
+  border: 1rem solid rgba(245, 63, 181, 0.218); /* Border gros cu roz transparent */
+  padding: 2rem; /* Spațiu interior */
+  display: flex; /* Conținutul intern este aliniat pe orizontală */
+  align-items: center; /* Centrare verticală a conținutului */
+  flex: 1 1 25rem; /* Fiecare box ia minimum 25rem, dar se poate întinde */
+  max-width: 25%; /* Fiecare ocupă maxim 25% din lățimea containerului (4 pe rând) */
+  gap: 1rem; /* Spațiu între imagine și text */
 }
 .icons-container .icons img {
-  width: 50px;
-  height: auto;
-  margin-right: 2rem;
+  width: 50px; /* Icon-ul are dimensiune fixă */
+  height: auto; /* Păstrează proporțiile */
+  margin-right: 2rem; /* Spațiu între icon și text */
 }
-
 .icons-container .icons h3 {
-  color: #333;
-  padding-bottom: 0.5rem;
-  font-size: 2rem;
-  font-family: "Cormorant Garamond", serif;
+  color: #333; /* Gri închis – lizibilitate bună */
+  padding-bottom: 0.5rem; /* Spațiu între titlu și descriere */
+  font-size: 2rem; /* Dimensiune mare */
+  font-family: "Cormorant Garamond", serif; /* Font elegant */
 }
-
 .icons-container .icons span {
-  color: #555;
-  font-size: 1.3rem;
+  color: #555; /* Gri mai deschis decât titlul */
+  font-size: 1.3rem; /* Dimensiune mai mică, ideală pentru detalii */
 }
-
 .products .box-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem; /* Aceasta adaugă distanță între fiecare box */
+  display: flex; /* Aliniază elementele în linie (flexbox) */
+  flex-wrap: wrap; /* Permite elementelor să treacă pe o linie nouă dacă nu încap */
+  gap: 1.5rem; /* Adaugă distanță între fiecare box */
 }
 
 .products .box-container .box {
-  flex: 1 1 30rem;
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  border: 0.1rem solid rgba(0, 0, 0, 0.1);
-  position: relative;
-  background: rgba(255, 51, 153, 0.05);
-  padding: 2rem; /* Aceasta creează spațiu între marginea box-ului și conținutul din interior */
-  margin: 1rem; /* Adaugă distanță între fiecare box */
+  flex: 1 1 30rem; /* Fiecare box ocupă 30rem, dar poate să se ajusteze la nevoie */
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1); /* Adaugă umbra ușoară pentru un efect de adâncire */
+  border-radius: 0.5rem; /* Colțuri rotunjite */
+  border: 0.1rem solid rgba(0, 0, 0, 0.1); /* Adaugă o margine subțire de culoare gri */
+  position: relative; /* Permite poziționarea relativă a elementului */
+  background: rgba(
+    255,
+    51,
+    153,
+    0.05
+  ); /* Setează un fundal semi-transparent cu culoare roz */
+  padding: 2rem; /* Adaugă spațiu între marginea box-ului și conținut */
+  margin: 1rem; /* Adaugă spațiu între box-uri */
 }
 
 .products .box-container .box .image {
-  position: relative;
-  text-align: center;
-  padding-top: 2rem;
-  overflow: hidden;
+  position: relative; /* Permite poziționarea relativă a imaginii */
+  text-align: center; /* Centrează imaginea orizontal */
+  padding-top: 2rem; /* Adaugă spațiu sus */
+  overflow: hidden; /* Ascunde partea din afară a imaginii dacă depășește containerul */
 }
 
 .products .box-container .box .image img {
-  /* corectăm selectorul */
-  width: 100%; /* Face imaginea să se adapteze containerului */
-  max-width: 250px; /* Dimensiune maximă */
-  height: auto; /* Păstrează proporțiile */
-  display: block; /* Elimină spațiul alb sub imagine */
+  width: 100%; /* Adaptează imaginea la lățimea containerului */
+  max-width: 250px; /* Setează o lățime maximă de 250px pentru imagine */
+  height: auto; /* Păstrează proporțiile imaginii */
+  display: block; /* Elimină spațiile goale de sub imagine */
   margin: 0 auto; /* Centrează imaginea */
 }
 
 .products .box-container .box:hover .image .img {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Mărește imaginea la hover */
 }
 
 .products .box-container .box .content {
-  padding: 2rem;
-  text-align: center;
-  font-family: "Cormorant Garamond", serif;
+  padding: 2rem; /* Adaugă spațiu în interiorul box-ului pentru text */
+  text-align: center; /* Centrează textul */
+  font-family: "Cormorant Garamond", serif; /* Setează fontul pentru text */
 }
 
 .products .box-container .box .content h3 {
-  font-size: 2.5rem;
-  color: #333;
-  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem; /* Setează dimensiunea titlului */
+  color: #333; /* Culoare gri închis pentru titlu */
+  font-family: "Cormorant Garamond", serif; /* Setează fontul pentru titlu */
 }
 
 .products .box-container .box .content .price {
-  font-size: 2.5rem;
-  color: var(--pink);
-  font-weight: bolder;
-  font-family: "Cormorant Garamond", serif;
-  padding-top: 1rem;
+  font-size: 2.5rem; /* Dimensiune mare pentru preț */
+  color: var(--pink); /* Culoare personalizată roz pentru preț */
+  font-weight: bolder; /* Face textul mai îndrăzneț */
+  font-family: "Cormorant Garamond", serif; /* Setează fontul pentru preț */
+  padding-top: 1rem; /* Adaugă spațiu sus față de alte elemente */
 }
 
 .products .heading {
-  margin-top: 5rem;
+  margin-top: 5rem; /* Adaugă margine de 5rem sus pentru titlul secțiunii */
 }
 
 .contact .heading {
-  margin-top: 5rem;
+  margin-top: 5rem; /* Adaugă margine de 5rem sus pentru titlul secțiunii contact */
 }
 
 .products .heading span {
-  color: #e84393; /* Culoare personalizată pentru <strong> */
-  font-family: "Cormorant Garamond", serif;
-  font-size: 4.5rem; /* Dimensiune text pentru <strong> */
-  font-weight: lighter;
+  color: #e84393; /* Culoare personalizată roz pentru textul din span */
+  font-family: "Cormorant Garamond", serif; /* Setează fontul pentru textul din span */
+  font-size: 4.5rem; /* Dimensiune mare pentru textul din span */
+  font-weight: lighter; /* Face textul mai subțire */
 }
-
 .review .box-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  display: flex; /* Aliniază elementele în linie folosind flexbox */
+  flex-wrap: wrap; /* Permite elementelor să treacă pe o linie nouă dacă nu încap */
+  gap: 1.5rem; /* Adaugă distanță între fiecare box */
 }
 
 .review .box-container .review-box {
-  flex: 1 1 30rem;
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  padding: 3rem 2rem;
-  position: relative;
-  border: 1rem solid rgba (0, 0, 0, 0.1);
+  flex: 1 1 30rem; /* Fiecare box ocupă 30rem, dar poate să se ajusteze la nevoie */
+  box-shadow: 0 0.5rem 1.5rem rgba(255, 133, 220, 0.195); /* Adaugă umbra ușoară pentru un efect de adâncire */
+  border-radius: 0.5rem; /* Colțuri rotunjite pentru box */
+  padding: 3rem 2rem; /* Adaugă spațiu intern în interiorul box-ului */
+  position: relative; /* Permite poziționarea relativă a elementului */
+  border: 0.3rem solid rgba(254, 126, 235, 0.233); /* Adaugă margine subțire de culoare gri */
 }
 
 .review .box-container .review-box .fa-quote-right {
-  position: absolute;
-  bottom: 3rem;
-  right: 3rem;
-  font-size: 6rem;
-  color: #eee;
+  position: absolute; /* Permite poziționarea absolută a citatului */
+  bottom: 3rem; /* Plasează citatul la 3rem de jos */
+  right: 3rem; /* Plasează citatul la 3rem de dreapta */
+  font-size: 6rem; /* Setează dimensiunea mare a citatului */
+  color: #eee; /* Culoare deschisă pentru citat */
 }
 
 .review .box-container .review-box .stars i {
-  color: var(--pink);
-  font-size: 2rem;
+  color: var(--pink); /* Culoare personalizată roz pentru stele */
+  font-size: 2rem; /* Dimensiune medie pentru stele */
 }
 
 .review .box-container .review-box p {
-  color: #999;
-  font-size: 2rem;
-  line-height: 1.5;
-  padding-top: 2rem;
-  text-transform: none;
-  font-family: "Cormorant Garamond ", serif;
+  color: #999; /* Culoare gri pentru textul recenziei */
+  font-size: 2rem; /* Dimensiune medie pentru text */
+  line-height: 1.5; /* Setează înălțimea liniei pentru textul recenziei */
+  padding-top: 2rem; /* Adaugă spațiu sus față de alte elemente */
+  text-transform: none; /* Nu transformă textul în majuscule */
+  font-family: "Cormorant Garamond", serif; /* Setează fontul pentru textul recenziei */
 }
 
 .review .box-container .review-box .user {
-  display: flex;
-  align-items: center;
-  padding-top: 2rem;
+  display: flex; /* Folosește flexbox pentru a alinia elementele pe orizontală */
+  align-items: center; /* Centrează elementele pe verticală */
+  padding-top: 2rem; /* Adaugă spațiu sus față de celelalte elemente */
 }
 
 .review .box-container .review-box .user img {
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 1rem;
+  height: 6rem; /* Setează înălțimea imaginii utilizatorului */
+  width: 6rem; /* Setează lățimea imaginii utilizatorului */
+  border-radius: 50%; /* Face imaginea rotundă */
+  object-fit: cover; /* Asigură că imaginea se potrivește fără a fi deformată */
+  margin-right: 1rem; /* Adaugă spațiu între imagine și text */
 }
 
 .review .box-container .review-box .user h3 {
-  font-size: 2rem;
-  color: #333;
+  font-size: 2rem; /* Setează dimensiunea textului pentru numele utilizatorului */
+  color: #333; /* Culoare gri închis pentru numele utilizatorului */
 }
 
 .review .box-container .review-box .user span {
-  font-size: 1.5rem;
-  color: #999;
+  font-size: 1.5rem; /* Dimensiune mai mică pentru detaliile utilizatorului */
+  color: #999; /* Culoare gri deschis pentru detaliile utilizatorului */
 }
 .contact .row {
-  display: flex;
-  flex-wrap: wrap-reverse;
-  gap: 1.5rem;
-  align-items: center;
-  max-width: 150rem; /* sau cât vrei tu */
-  margin: 0 auto; /* centrează containerul */
-  padding: 0 2rem; /* opțional, spațiu pe margini */
+  display: flex; /* Folosește flexbox pentru a alinia elementele pe orizontală */
+  flex-wrap: wrap-reverse; /* Permite elementelor să se împacheteze invers, adică să înceapă de jos */
+  gap: 1.5rem; /* Adaugă distanță între elementele din container */
+  align-items: center; /* Centrează elementele pe verticală */
+  max-width: 150rem; /* Limitează lățimea maximă a containerului */
+  margin: 0 auto; /* Centrează containerul pe orizontală */
+  padding: 0 2rem; /* Adaugă spațiu pe margini (stânga și dreapta) */
 }
 
 .contact .row form {
-  flex: 1 1 40rem;
-  padding: 2rem 2.5rem;
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-  border: 1rem solid rgba(247, 145, 230, 0.138);
-  background: #fff;
-  border-radius: 0.5rem;
+  flex: 1 1 40rem; /* Setează lățimea formului la 40rem, cu flexibilitate */
+  padding: 2rem 2.5rem; /* Adaugă spațiu intern în jurul formului */
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1); /* Adaugă umbra subtilă pentru un efect de adâncire */
+  border: 1rem solid rgba(247, 145, 230, 0.138); /* Adaugă margine roz deschis cu transparență */
+  background: #fff; /* Setează fundal alb pentru formular */
+  border-radius: 0.5rem; /* Colțuri rotunjite pentru formular */
 }
 
 .contact .row .image {
-  flex: 1 1 40rem;
+  flex: 1 1 40rem; /* Setează lățimea imaginii la 40rem, similar cu formularul */
 }
 
 .contact .row .image img {
-  width: 100%;
+  width: 100%; /* Face imaginea să ocupe întreaga lățime a containerului */
 }
 
 .contact .row form .box {
-  padding: 1rem;
-  font-size: 1.7rem;
-  color: #333;
-  text-transform: none;
-  border: 0.1rem solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  margin: 0.7rem 0;
-  width: 100%;
+  padding: 1rem; /* Adaugă spațiu în interiorul fiecărui câmp de formular */
+  font-size: 1.7rem; /* Setează dimensiunea fontului pentru textul din câmpuri */
+  color: #333; /* Culoare text gri închis pentru câmpuri */
+  text-transform: none; /* Nu transformă textul în majuscule */
+  border: 0.1rem solid rgba(0, 0, 0, 0.1); /* Adaugă margine subțire de culoare gri deschis */
+  border-radius: 0.5rem; /* Colțuri rotunjite pentru câmpurile de input */
+  margin: 0.7rem 0; /* Adaugă spațiu între câmpuri (sus și jos) */
+  width: 100%; /* Face câmpurile să ocupe toată lățimea disponibilă */
 }
 
 .contact .row form .box:focus {
-  border-color: var(--pink);
+  border-color: var(
+    --pink
+  ); /* Culoare personalizată la focus pentru câmpurile de input */
 }
 
 .contact .row form textarea {
-  height: 15rem;
-  resize: none;
+  height: 15rem; /* Setează înălțimea textarea-ului */
+  resize: none; /* Previne redimensionarea manuală a textarea-ului */
 }
 
 .contact .heading {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 4.5rem; /* Dimensiune text pentru <strong> */
-  font-weight: lighter;
+  font-family: "Cormorant Garamond", serif; /* Setează fontul pentru titlu */
+  font-size: 4.5rem; /* Setează dimensiunea mare a titlului */
+  font-weight: lighter; /* Setează greutatea fontului mai ușoară */
 }
-
 /* Stiluri pentru secțiunea footer */
 .footer .box-container {
-  display: flex;
+  display: flex; /* Folosește flexbox pentru a aranja elementele pe orizontală */
   justify-content: space-between; /* Distribuie spațiul între cele două secțiuni */
   gap: 3rem; /* Spațiu între cele două secțiuni */
   padding: 2rem 9%; /* Adăugăm padding pe laturi pentru a da mai mult spațiu */
-  background: rgba(255, 51, 153, 0.05);
+  background: rgba(
+    255,
+    51,
+    153,
+    0.05
+  ); /* Fundal roz transparent pentru container */
 }
 
 .footer .box-container .footer-box {
   width: 45%; /* Fiecare div va ocupa 45% din lățimea containerului */
   text-align: center; /* Asigură alinierea conținutului pe verticală */
-  padding: 2rem;
+  padding: 2rem; /* Adaugă padding intern */
   border-radius: 1rem; /* Colțuri rotunjite pentru un aspect mai plăcut */
   background: #f9f9f9; /* Fundal deschis pentru a crea contrast */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adăugăm o umbră subtilă pentru adâncire */
-  border: 3px solid #ea45bb5c; /* Linii subtile pentru a le delimita */
+  border: 3px solid #ea45bb5c; /* Linii subtile pentru a delimita fiecare secțiune */
 }
+
 .footer .box-container .footer-box h3 {
-  color: #333;
-  font-size: 2.5rem;
-  padding: 1rem 0;
+  color: #333; /* Culoare text gri închis */
+  font-size: 2.5rem; /* Setează dimensiunea fontului */
+  padding: 1rem 0; /* Adaugă padding pe sus și jos */
   font-weight: bold; /* Întărește titlurile pentru mai mult impact */
   letter-spacing: 1px; /* Dă un spațiu ușor între litere */
-  text-transform: none;
-  font-family: "Cormorant Garamond ", serif;
+  text-transform: none; /* Nu transformă literele în majuscule */
+  font-family: "Cormorant Garamond", serif; /* Setează fontul pentru titluri */
 }
 
 .footer .box-container .footer-box a {
-  display: block;
-  color: #666;
-  font-size: 2rem;
-  padding: 1rem 0;
-  transition: color 0.3s ease;
-  text-transform: none;
-  font-family: "Cormorant Garamond ", serif;
+  display: block; /* Face linkurile să ocupe întreaga lățime a containerului */
+  color: #666; /* Culoare gri pentru linkuri */
+  font-size: 2rem; /* Setează dimensiunea fontului pentru linkuri */
+  padding: 1rem 0; /* Adaugă padding pe sus și jos pentru linkuri */
+  transition: color 0.3s ease; /* Efect de tranziție pentru culoarea linkului */
+  text-transform: none; /* Nu transformă textul în majuscule */
+  font-family: "Cormorant Garamond", serif; /* Setează fontul pentru linkuri */
 }
 
 .footer .box-container .footer-box a:hover {
-  color: var(--pink);
+  color: var(--pink); /* Schimbă culoarea la hover */
   font-weight: bold; /* Întărește linkul la hover */
 }
 
 .footer .box-container .footer-box img {
-  width: 150px;
-  height: auto;
-  margin-top: 1rem;
-  display: block;
-  margin-left: auto; /* Aliniere automată pentru a o pune la centru */
-  margin-right: auto;
+  width: 150px; /* Setează lățimea imaginii */
+  height: auto; /* Păstrează proporțiile imaginii */
+  margin-top: 1rem; /* Adaugă un spațiu sus de imagine */
+  display: block; /* Face imaginea un element de bloc */
+  margin-left: auto; /* Centrează imaginea pe orizontală */
+  margin-right: auto; /* Centrează imaginea pe orizontală */
   border-radius: 0.5rem; /* Colțuri rotunjite pentru imagine */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Umbră subtilă pentru imagine */
 }
 
 /* Stiluri pentru credit */
 .footer .credit {
-  text-align: center;
-  padding: 1.5rem;
-  margin-top: 1.5rem;
-  padding-top: 2.5rem;
-  font-size: 2rem;
-  color: #333;
-  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-  font-family: "Cormorant Garamond ", serif;
+  text-align: center; /* Centrează textul în container */
+  padding: 1.5rem; /* Adaugă padding pentru a crea spațiu în jurul textului */
+  margin-top: 1.5rem; /* Adaugă distanță față de elementele de sus */
+  padding-top: 2.5rem; /* Adaugă spațiu suplimentar sus */
+  font-size: 2rem; /* Setează dimensiunea fontului pentru credit */
+  color: #333; /* Culoare gri închis pentru text */
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1); /* Adaugă o linie subțire de separare deasupra */
+  font-family: "Cormorant Garamond", serif; /* Setează fontul pentru credit */
 }
 
 .footer .credit span {
-  color: var(--pink);
-  font-family: "Cormorant Garamond ", serif;
+  color: var(--pink); /* Schimbă culoarea span-ului la roz */
+  font-family: "Cormorant Garamond", serif; /* Setează fontul pentru span */
 }
-
-
 /* Modal styles */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 60px;
+  display: none; /* Modalul este ascuns inițial */
+  position: fixed; /* Modalul este poziționat fix pe ecran */
+  z-index: 1; /* Asigură că modalul este în fața altor elemente */
+  left: 0; /* Poziționează modalul la stânga ecranului */
+  top: 0; /* Poziționează modalul în partea de sus a ecranului */
+  width: 100%; /* Modalul va ocupa toată lățimea ecranului */
+  height: 100%; /* Modalul va ocupa toată înălțimea ecranului */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Fundal semitransparent negru pentru a evidenția modalul */
+  padding-top: 60px; /* Adaugă un spațiu la partea de sus pentru a evita suprapunerea cu conținutul paginii */
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 5% auto;
-  border-radius: 30px;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 800px;
-   text-transform: none;
+  background-color: #fefefe; /* Fundal alb pentru conținutul modalului */
+  margin: 5% auto; /* Adaugă un spațiu de 5% în jurul modalului și îl centrează pe ecran */
+  border-radius: 30px; /* Colțuri rotunjite pentru un aspect mai plăcut */
+  padding: 20px; /* Adaugă padding pentru a crea spațiu în interiorul modalului */
+  border: 1px solid #888; /* Adaugă o bordură subțire și deschisă la culoare */
+  width: 80%; /* Lățimea modalului este setată la 80% din lățimea ferestrei */
+  max-width: 800px; /* Modalul nu va depăși 800px lățime */
 }
 
 .modal-body {
-  display: flex;
-  justify-content: space-between;
+  display: flex; /* Folosește flexbox pentru a organiza conținutul în linie */
+  justify-content: space-between; /* Spațiere egală între imagine și detalii */
 }
 
 .modal-image {
-  width: 45%;
+  width: 45%; /* Imaginea va ocupa 45% din lățimea containerului */
 }
 
 .modal-image img {
-  width: 100%;
-  height: auto;
+  width: 100%; /* Imaginea va ocupa întreaga lățime a containerului */
+  height: auto; /* Păstrează proporțiile imaginii */
 }
 
 .modal-details {
-  width: 50%;
-  padding-left: 20px;
+  width: 50%; /* Detaliile vor ocupa 50% din lățimea containerului */
+  padding-left: 20px; /* Adaugă spațiu la stânga pentru a separa detaliile de imagine */
 }
 
 #modalName {
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "Cormorant Garamond ", serif;
+  font-size: 24px; /* Dimensiune mare pentru numele produsului */
+  font-weight: bold; /* Numele va fi cu caractere îngroșate */
+  font-family: "Cormorant Garamond", serif; /* Font elegant pentru numele produsului */
 }
 
 #modalDescription {
-  font-size: 18px;
-  margin: 10px 0;
-  font-family: "Cormorant Garamond ", serif;
-  text-transform: none;
+  font-size: 18px; /* Dimensiune medie pentru descrierea produsului */
+  margin: 10px 0; /* Adaugă spațiu între descriere și alte elemente */
+  font-family: "Cormorant Garamond", serif; /* Font elegant pentru descriere */
 }
 
 #modalPrice {
-  font-size: 20px;
-  color: rgb(228, 21, 193);
-  font-family: "Cormorant Garamond ", serif;
+  font-size: 20px; /* Dimensiune mare pentru preț */
+  color: rgb(228, 21, 193); /* Culoare roz pentru preț */
+  font-family: "Cormorant Garamond", serif; /* Font elegant pentru preț */
 }
-
+/* Stiluri pentru butonul de închidere al modalului */
 .close {
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold;
-  position: absolute;
-  top: 10px;
-  right: 25px;
+  color: #aaa; /* Culoare gri pentru butonul de închidere */
+  font-size: 28px; /* Dimensiune mare pentru buton */
+  font-weight: bold; /* Face textul butonului îngroșat */
+  position: absolute; /* Poziționează butonul într-un loc fix față de container */
+  top: 10px; /* Poziționează butonul la 10px de sus */
+  right: 25px; /* Poziționează butonul la 25px de dreapta */
 }
 
 .close:hover,
 .close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+  color: black; /* Culoare neagră când treci cu mouse-ul sau focalizezi butonul */
+  text-decoration: none; /* Elimină sublinierea la hover/focus */
+  cursor: pointer; /* Schimbă cursorul într-un pointer pentru interactivitate */
 }
 
+/* Stiluri media pentru ecrane mai mici */
 @media (max-width: 991px) {
   html {
-    font-size: 55%;
+    font-size: 55%; /* Diminuează dimensiunea fontului pentru ecrane mai mici */
   }
   header {
-    padding: 2rem;
+    padding: 2rem; /* Redimensionează padding-ul pentru header */
   }
   section {
-    padding: 2rem;
+    padding: 2rem; /* Redimensionează padding-ul pentru secțiuni */
   }
   .home {
-    background-position: center;
+    background-position: center; /* Centrează imaginea de fundal pe ecrane mai mici */
   }
 }
-
+/* Media query pentru ecrane cu lățimea mai mică de 768px (tablete și telefoane) */
 @media (max-width: 768px) {
   body {
-    font-size: 18px;
+    font-size: 18px; /* Reducerea dimensiunii fontului pe dispozitive mici */
   }
 
   header .fa-bars {
-    display: block;
+    display: block; /* Afișează iconița pentru meniul de navigare pe dispozitive mici */
   }
 
   header .navbar {
-    position: absolute;
-    top: 100%;
+    position: absolute; /* Poziționează navbar-ul sub header */
+    top: 100%; /* Așază navbar-ul imediat sub header */
     left: 0;
     right: 0;
-    background: #eee;
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    display: block;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
+    background: #eee; /* Fundal gri pentru navbar */
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1); /* Linie de separare între navbar și restul conținutului */
+    display: block; /* Lăsați navbar-ul să fie bloc */
+    max-height: 0; /* Înălțimea maximă 0 pentru a-l ascunde inițial */
+    overflow: hidden; /* Ascunde orice conținut în afacerea navbar-ului */
+    transition: max-height 0.5s ease-in-out; /* Tranziție lină pentru deschiderea navbar-ului */
   }
 
+  /* Când #toggler este bifat, navbar-ul se va deschide */
   #toggler:checked ~ .navbar {
-    max-height: 768px;
+    max-height: 768px; /* Maximizează înălțimea navbar-ului pentru a-l face vizibil */
   }
 
   header .navbar a {
-    margin: 1.5rem 0;
-    padding: 1.5rem;
-    background: #fff;
-    border: 0.3rem solid rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    display: none;
+    margin: 1.5rem 0; /* Distanță între linkuri */
+    padding: 1.5rem; /* Spațiu interior pentru fiecare link */
+    background: #fff; /* Fundal alb pentru linkuri */
+    border: 0.3rem solid rgba(0, 0, 0, 0.1); /* Linie subtire pe fiecare link */
+    display: flex; /* Folosește flexbox pentru a alinia conținutul */
+    flex-direction: column; /* Aliniază elementele pe verticală */
+    align-items: center; /* Centrează elementele pe orizontală */
+    width: 100%; /* Lățimea completă a fiecărui link */
+    display: none; /* Ascunde linkurile inițial */
   }
 
+  /* Când #toggler este bifat, linkurile devin vizibile */
   #toggler:checked ~ .navbar a {
-    display: flex;
+    display: flex; /* Afișează linkurile pe ecrane mici */
   }
 
   .home .content h3 {
-    font-size: 5rem;
+    font-size: 5rem; /* Mărește dimensiunea titlului în secțiunea "home" */
   }
 
   .home .content span {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Mărește dimensiunea textului de tip span în secțiunea "home" */
   }
 
   .icons-container .icons {
-    flex: 1 1 100%;
-    max-width: 100%;
+    flex: 1 1 100%; /* Asigură că fiecare icon ocupă întreaga lățime disponibilă */
+    max-width: 100%; /* Maximizează lățimea iconului */
   }
 
   .icons-container .icons img {
-    width: 40px;
+    width: 40px; /* Mărimea iconițelor la 40px */
   }
 
   .icons-container .icons h3 {
-    font-size: 2rem;
+    font-size: 2rem; /* Dimensiunea titlurilor iconurilor */
   }
 
   .icons-container .icons span {
-    font-size: 1.7rem;
+    font-size: 1.7rem; /* Dimensiunea textului de sub iconuri */
   }
 }
 
+/* Media query pentru ecrane cu lățimea mai mică de 450px (pentru telefoane mici) */
 @media (max-width: 450px) {
   html {
-    font-size: 50%;
+    font-size: 50%; /* Reduce dimensiunea fontului la 50% pentru telefoane foarte mici */
   }
   .heading {
-    font-size: 3rem;
+    font-size: 3rem; /* Reducerea dimensiunii titlurilor */
   }
 }
